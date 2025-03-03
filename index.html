@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sketch</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+  </head>
+
+  <body>
+    <input type="text" id="textInput" style="position: absolute; top: 0; width: 80%; height: 50px; font-size: 24px;" placeholder="輸入文字...">
+    <input type="range" id="textSizeSlider" min="28" max="50" value="32" style="position: absolute; top: 0; right: 0; width: 20%; height: 50px;" oninput="updateTextSize()">
+    <button id="jumpButton" style="position: absolute; top: 60px; right: 20%; width: 20%; height: 50px;" onclick="toggleJump()">跳動文字</button>
+    <select id="weekSelect" style="position: absolute; top: 60px; right: 0; width: 20%; height: 50px;" onchange="navigateToWeek()">
+      <option value="">選擇周</option>
+      <option value="week1">淡江大學</option>
+      <option value="week2">教育科技學系</option>
+      <option value="week3">筆記</option>
+    </select>
+    <iframe id="contentFrame" style="position: absolute; top: 120px; left: 100px; right: 100px; bottom: 100px; width: calc(100% - 200px); height: calc(100% - 220px); border: none;"></iframe>
+    <script src="sketch.js"></script>
+  </body>
+</html>
